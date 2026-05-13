@@ -1,9 +1,21 @@
-<script>
-window.addEventListener('load', () => {
-  let msg = new SpeechSynthesisUtterance("Suneel Fashion nundi order vachindi. Check cheyyandi");
-  msg.lang = 'en-IN';
-  msg.pitch = 0.9;
-  msg.rate = 1;
-  speechSynthesis.speak(msg);
-});
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suneel Fashion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h2 style="text-align:center;">Suneel Fashion Orders</h2>
+  <div style="text-align:center; margin-top:50px;">
+    <button onclick="speak()" style="padding:20px 40px; font-size:22px; background:#28a745; color:white; border:none; border-radius:10px;">🔊 Order Alert Chey</button>
+  </div>
+
+  <script>
+  function speak(){
+    let msg = new SpeechSynthesisUtterance("Suneel Fashion nundi order vachindi. Check cheyyandi");
+    msg.lang = 'en-IN';
+    speechSynthesis.speak(msg);
+  }
+  </script>
+</body>
+</html>
